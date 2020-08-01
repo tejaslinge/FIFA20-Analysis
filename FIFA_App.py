@@ -151,7 +151,7 @@ plot_colors_select = plotly_colors.shape[0]
 
 ###########################################################################################################
 st.write(''' ## Player Comparison''')
-st.write(''' To compare two players check the box below and select name of Clubs, data to be compared and name of the Players from the side bar ''')
+st.write(''' To compare Players check the box below and select name of Clubs, data to be compared and name of the Players from the side bar ''')
 
 @st.cache(persist = True)
 @st.cache(suppress_st_warning=True)
@@ -192,7 +192,7 @@ attr = ["Age","Height(cm)","Weight(kg)","Overall","Potential","Value(Euro)","Wag
   "Goalkeeping Reflexes","LS","ST","RS","LW","LF","CF","RF","RW","LAM","CAM","RAM","LM","LCM","CM","RCM","RM","LWB","LDM","CDM","RDM",
   "RWB","LB","LCB","CB","RCB","RB"]
 
-if st.checkbox("Check the box to compare two players"):
+if st.checkbox("Check the box to compare Players"):
     
     teams = np.array(st.sidebar.multiselect("Select the name of Club:", fifa_org['Clubs'].unique()))
     
