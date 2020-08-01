@@ -192,7 +192,7 @@ attr = ["Age","Height(cm)","Weight(kg)","Overall","Potential","Value(Euro)","Wag
   "Goalkeeping Reflexes","LS","ST","RS","LW","LF","CF","RF","RW","LAM","CAM","RAM","LM","LCM","CM","RCM","RM","LWB","LDM","CDM","RDM",
   "RWB","LB","LCB","CB","RCB","RB"]
 
-if st.checkbox("Check the box to compare two players"):
+if st.checkbox("Check the box to compare Players"):
     
     teams = np.array(st.sidebar.multiselect("Select the name of Club:", fifa_org['Clubs'].unique()))
     
@@ -203,7 +203,7 @@ if st.checkbox("Check the box to compare two players"):
     selected_clubs.set_index('Name', inplace = True)    
     selected_players = st.sidebar.multiselect('Select the Players to be compared:', selected_clubs.index)#.Name.unique())#.loc[:, 'Name'])#..unique())#, two_clubs_data.Name.unique())
     
-    is_check = st.checkbox("Check the box to display Players of selected Clubs and their selected data")
+    is_check = st.checkbox("Check the box to display Players of selected Clubs")
     
     if is_check:
         a = [teams, variables, selected_clubs]
