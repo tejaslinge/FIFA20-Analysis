@@ -1,5 +1,6 @@
 
 import string
+import urllib.parse
 import pandas as pd
 import numpy as np
 import streamlit as st 
@@ -11,6 +12,14 @@ import plotly.express as px
 from PIL import Image
 
 st.write('*By:\nTejas Linge & Saurav Himmatrao Chavan*')
+
+logoIm = Image.open('logo.png')
+st.image(logoIm, width = 20,caption = 'GitHub',clamp=True)
+
+s1 = urllib.parse.quote('github.com/SauravChavan/FIFA20_Insights_App')
+s2 = s = urllib.parse.quote('github.com/tejaslinge/FIFA20-Analysis')
+st.write('https://'+s1)
+st.write('https://'+s2)
 
 ###########################################################################################################
 pd.set_option('display.max_columns', 150)
@@ -203,7 +212,7 @@ if st.checkbox("Check the box to compare Players"):
     selected_clubs.set_index('Name', inplace = True)    
     selected_players = st.sidebar.multiselect('Select the Players to be compared:', selected_clubs.index)#.Name.unique())#.loc[:, 'Name'])#..unique())#, two_clubs_data.Name.unique())
     
-    is_check = st.checkbox("Check the box to display Players of selected Clubs and their selected data")
+    is_check = st.checkbox("Check the box to display Players of selected Clubs")
     
     if is_check:
         a = [teams, variables, selected_clubs]
