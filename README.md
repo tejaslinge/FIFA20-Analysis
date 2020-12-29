@@ -12,4 +12,5 @@ To view the complete notebook with outputs as well, one nice option is to paste 
 
 FIFA_App.py is the code for FIFA20 Stats App which is created using Streamlit library and the Web App is deployed on Heroku cloud platform. We can see some of the results from the Jupyter Notebook in the web app plus there's an additional factor of interactivity because of Streamlit.
 
-Check out https://fifa-stats-app.herokuapp.com/ for the streamlit based data visualization webapp.
+1. Check out https://fifa-stats-app.herokuapp.com/ for the streamlit based data visualization webapp.
+2. Check out https://nbviewer.jupyter.org/github/tejaslinge/FIFA20-Analysis/blob/master/FIFA.ipynb to view complete Jupyter notebook.
